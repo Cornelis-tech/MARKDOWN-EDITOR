@@ -1,0 +1,32 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <button class="menu-btn" (click)="toggleMenu()">
+      <img src="/assets/icon-menu.svg" alt="menu">
+    </button>
+    <div *ngIf="menuOpen" class="menu-dropdown">
+      <button class="menu-item">
+        <img src="/assets/icon-save.svg" alt="saved files"> Saved Files
+      </button>
+      <button class="menu-item">
+        <img src="/assets/icon-show-preview.svg" alt="preview"> Preview
+      </button>
+      <button class="menu-item" *ngIf="!isDarkMode" (click)="toggleTheme()">
+        <img src="/assets/icon-light-mode.svg" alt="light mode"> Light Mode
+      </button>
+      <button class="menu-item" *ngIf="isDarkMode" (click)="toggleTheme()">
+        <img src="/assets/icon-dark-mode.svg" alt="dark mode"> Dark Mode
+      </button>
+    </div>
+    <span class="brand-name"><img src="/assets/logo.svg" alt="Logo"></span>
+  </div>
+  <div class="document-info">
+    <img src="/assets/icon-document.svg" alt="document-name">
+    <span class="document-name">welcome.md</span>
+  </div>
+  <div class="navbar-actions">
+    <button class="delete-btn">
+      <img src="/assets/icon-delete.svg" alt="delete">
+    </button>
+    <button class="save-btn"><img src="/assets/icon-save.svg" alt="save">Save Changes</button>
+  </div>
+</nav>
